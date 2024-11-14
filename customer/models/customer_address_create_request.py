@@ -18,17 +18,13 @@ import pprint
 import re  # noqa: F401
 import json
 
-
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictBool, StrictStr
-from pydantic import Field
 from customer.models.customer_address_create_request_kind import CustomerAddressCreateRequestKind
 from customer.models.customer_em_fields import CustomerEMFields
 from customer.models.protobuf_any import ProtobufAny
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class CustomerAddressCreateRequest(BaseModel):
     """
@@ -47,17 +43,18 @@ class CustomerAddressCreateRequest(BaseModel):
     phone_number: Optional[StrictStr] = Field(default=None, alias="phoneNumber")
     fiscal_code: Optional[StrictStr] = Field(default=None, alias="fiscalCode")
     vat_number: Optional[StrictStr] = Field(default=None, alias="vatNumber")
-    kind: Optional[CustomerAddressCreateRequestKind] = None
+    kind: Optional[CustomerAddressCreateRequestKind] = CustomerAddressCreateRequestKind.SHIPPING
     default: Optional[StrictBool] = None
     country: Optional[StrictStr] = None
     attributes: Optional[Dict[str, ProtobufAny]] = None
+    additional_properties: Dict[str, Any] = {}
     __properties: ClassVar[List[str]] = ["tenantId", "customerId", "em", "name", "surname", "street", "number", "zip", "city", "province", "phoneNumber", "fiscalCode", "vatNumber", "kind", "default", "country", "attributes"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -70,7 +67,7 @@ class CustomerAddressCreateRequest(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of CustomerAddressCreateRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -83,11 +80,15 @@ class CustomerAddressCreateRequest(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
+        * Fields in `self.additional_properties` are added to the output dict.
         """
+        excluded_fields: Set[str] = set([
+            "additional_properties",
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of em
@@ -96,14 +97,19 @@ class CustomerAddressCreateRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in attributes (dict)
         _field_dict = {}
         if self.attributes:
-            for _key in self.attributes:
-                if self.attributes[_key]:
-                    _field_dict[_key] = self.attributes[_key].to_dict()
+            for _key_attributes in self.attributes:
+                if self.attributes[_key_attributes]:
+                    _field_dict[_key_attributes] = self.attributes[_key_attributes].to_dict()
             _dict['attributes'] = _field_dict
+        # puts key-value pairs in additional_properties in the top level
+        if self.additional_properties is not None:
+            for _key, _value in self.additional_properties.items():
+                _dict[_key] = _value
+
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of CustomerAddressCreateRequest from a dict"""
         if obj is None:
             return None
@@ -114,7 +120,7 @@ class CustomerAddressCreateRequest(BaseModel):
         _obj = cls.model_validate({
             "tenantId": obj.get("tenantId"),
             "customerId": obj.get("customerId"),
-            "em": CustomerEMFields.from_dict(obj.get("em")) if obj.get("em") is not None else None,
+            "em": CustomerEMFields.from_dict(obj["em"]) if obj.get("em") is not None else None,
             "name": obj.get("name"),
             "surname": obj.get("surname"),
             "street": obj.get("street"),
@@ -125,16 +131,21 @@ class CustomerAddressCreateRequest(BaseModel):
             "phoneNumber": obj.get("phoneNumber"),
             "fiscalCode": obj.get("fiscalCode"),
             "vatNumber": obj.get("vatNumber"),
-            "kind": obj.get("kind"),
+            "kind": obj.get("kind") if obj.get("kind") is not None else CustomerAddressCreateRequestKind.SHIPPING,
             "default": obj.get("default"),
             "country": obj.get("country"),
             "attributes": dict(
                 (_k, ProtobufAny.from_dict(_v))
-                for _k, _v in obj.get("attributes").items()
+                for _k, _v in obj["attributes"].items()
             )
             if obj.get("attributes") is not None
             else None
         })
+        # store additional fields in additional_properties
+        for _key in obj.keys():
+            if _key not in cls.__properties:
+                _obj.additional_properties[_key] = obj.get(_key)
+
         return _obj
 
 

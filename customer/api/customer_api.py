@@ -12,20 +12,12 @@
     Do not edit the class manually.
 """  # noqa: E501
 
-
-import io
 import warnings
-
 from pydantic import validate_call, Field, StrictFloat, StrictStr, StrictInt
-from typing import Dict, List, Optional, Tuple, Union, Any
-
-try:
-    from typing import Annotated
-except ImportError:
-    from typing_extensions import Annotated
+from typing import Any, Dict, List, Optional, Tuple, Union
+from typing_extensions import Annotated
 
 from typing import Any, Dict
-
 from customer.models.customer_add_customer_to_group_request import CustomerAddCustomerToGroupRequest
 from customer.models.customer_address_create_request import CustomerAddressCreateRequest
 from customer.models.customer_address_customer_response import CustomerAddressCustomerResponse
@@ -73,7 +65,7 @@ from customer.models.customer_update_group_request import CustomerUpdateGroupReq
 from customer.models.customer_update_request import CustomerUpdateRequest
 from customer.models.customer_update_subscriber_request import CustomerUpdateSubscriberRequest
 
-from customer.api_client import ApiClient
+from customer.api_client import ApiClient, RequestSerialized
 from customer.api_response import ApiResponse
 from customer.rest import RESTResponseType
 
@@ -292,7 +284,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -303,7 +295,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -316,11 +310,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -338,6 +333,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -559,7 +555,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -570,7 +566,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -583,11 +581,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -605,6 +604,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -826,7 +826,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -837,7 +837,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -850,11 +852,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -872,6 +875,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -1093,7 +1097,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1104,7 +1108,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1117,11 +1123,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -1139,6 +1146,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -1360,7 +1368,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1371,7 +1379,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1384,11 +1394,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -1406,6 +1417,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -1627,7 +1639,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1638,7 +1650,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1651,11 +1665,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -1673,6 +1688,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -1894,7 +1910,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -1905,7 +1921,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -1918,11 +1936,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -1940,6 +1959,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -2161,7 +2181,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2172,7 +2192,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -2185,11 +2207,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -2207,6 +2230,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -2428,7 +2452,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2439,7 +2463,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -2452,11 +2478,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -2474,6 +2501,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -2695,7 +2723,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2706,7 +2734,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -2719,11 +2749,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -2741,6 +2772,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -2962,7 +2994,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -2973,7 +3005,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -2986,11 +3020,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -3008,6 +3043,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -3229,7 +3265,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -3240,7 +3276,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -3253,11 +3291,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -3275,6 +3314,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -3496,7 +3536,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -3507,7 +3547,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -3520,11 +3562,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -3542,6 +3585,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -3763,7 +3807,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -3774,7 +3818,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -3787,11 +3833,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -3809,6 +3856,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -4030,7 +4078,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -4041,7 +4089,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -4054,11 +4104,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -4076,6 +4127,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -4297,7 +4349,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -4308,7 +4360,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -4321,11 +4375,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -4343,6 +4398,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -4564,7 +4620,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -4575,7 +4631,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -4588,11 +4646,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -4610,6 +4669,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -4831,7 +4891,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -4842,7 +4902,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -4855,11 +4917,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -4877,6 +4940,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -5098,7 +5162,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -5109,7 +5173,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -5122,11 +5188,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -5144,6 +5211,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -5365,7 +5433,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -5376,7 +5444,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -5389,11 +5459,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -5411,6 +5482,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -5632,7 +5704,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -5643,7 +5715,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -5656,11 +5730,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -5678,6 +5753,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -5899,7 +5975,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -5910,7 +5986,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -5923,11 +6001,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -5945,6 +6024,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -6166,7 +6246,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -6177,7 +6257,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -6190,11 +6272,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -6212,6 +6295,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -6433,7 +6517,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -6444,7 +6528,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -6457,11 +6543,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -6479,6 +6566,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -6700,7 +6788,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -6711,7 +6799,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -6724,11 +6814,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -6746,6 +6837,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -6967,7 +7059,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -6978,7 +7070,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -6991,11 +7085,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -7013,6 +7108,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -7234,7 +7330,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -7245,7 +7341,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -7258,11 +7356,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -7280,6 +7379,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -7501,7 +7601,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -7512,7 +7612,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -7525,11 +7627,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -7547,6 +7650,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -7768,7 +7872,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -7779,7 +7883,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -7792,11 +7898,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -7814,6 +7921,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -8035,7 +8143,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -8046,7 +8154,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -8059,11 +8169,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -8081,6 +8192,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -8302,7 +8414,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -8313,7 +8425,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -8326,11 +8440,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -8348,6 +8463,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -8569,7 +8685,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -8580,7 +8696,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -8593,11 +8711,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -8615,6 +8734,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -8836,7 +8956,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -8847,7 +8967,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -8860,11 +8982,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -8882,6 +9005,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -9103,7 +9227,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -9114,7 +9238,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -9127,11 +9253,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -9149,6 +9276,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -9370,7 +9498,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -9381,7 +9509,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -9394,11 +9524,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -9416,6 +9547,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -9637,7 +9769,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -9648,7 +9780,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -9661,11 +9795,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -9683,6 +9818,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -9904,7 +10040,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -9915,7 +10051,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -9928,11 +10066,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -9950,6 +10089,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -10171,7 +10311,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -10182,7 +10322,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -10195,11 +10337,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -10217,6 +10360,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -10438,7 +10582,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -10449,7 +10593,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -10462,11 +10608,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -10484,6 +10631,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -10705,7 +10853,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -10716,7 +10864,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -10729,11 +10879,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -10751,6 +10902,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -10972,7 +11124,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -10983,7 +11135,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -10996,11 +11150,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -11018,6 +11173,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -11239,7 +11395,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -11250,7 +11406,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -11263,11 +11421,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -11285,6 +11444,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -11506,7 +11666,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -11517,7 +11677,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -11530,11 +11692,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -11552,6 +11715,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -11773,7 +11937,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -11784,7 +11948,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -11797,11 +11963,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -11819,6 +11986,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -12040,7 +12208,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -12051,7 +12219,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -12064,11 +12234,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -12086,6 +12257,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -12307,7 +12479,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -12318,7 +12490,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -12331,11 +12505,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -12353,6 +12528,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -12574,7 +12750,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -12585,7 +12761,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -12598,11 +12776,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -12620,6 +12799,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -12841,7 +13021,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -12852,7 +13032,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -12865,11 +13047,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -12887,6 +13070,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -13108,7 +13292,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -13119,7 +13303,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -13132,11 +13318,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -13154,6 +13341,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -13375,7 +13563,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -13386,7 +13574,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -13399,11 +13589,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -13421,6 +13612,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -13642,7 +13834,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -13653,7 +13845,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -13666,11 +13860,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -13688,6 +13883,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -13909,7 +14105,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -13920,7 +14116,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -13933,11 +14131,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -13955,6 +14154,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -14176,7 +14376,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -14187,7 +14387,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -14200,11 +14402,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -14222,6 +14425,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -14443,7 +14647,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -14454,7 +14658,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -14467,11 +14673,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -14489,6 +14696,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -14710,7 +14918,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -14721,7 +14929,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -14734,11 +14944,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -14756,6 +14967,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -14977,7 +15189,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -14988,7 +15200,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -15001,11 +15215,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -15023,6 +15238,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -15244,7 +15460,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -15255,7 +15471,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -15268,11 +15486,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -15290,6 +15509,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -15511,7 +15731,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -15522,7 +15742,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -15535,11 +15757,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -15557,6 +15780,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -15778,7 +16002,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -15789,7 +16013,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -15802,11 +16028,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -15824,6 +16051,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -16045,7 +16273,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -16056,7 +16284,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -16069,11 +16299,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -16091,6 +16322,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -16312,7 +16544,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -16323,7 +16555,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -16336,11 +16570,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -16358,6 +16593,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -16579,7 +16815,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -16590,7 +16826,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -16603,11 +16841,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -16625,6 +16864,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -16846,7 +17086,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -16857,7 +17097,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -16870,11 +17112,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -16892,6 +17135,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -17113,7 +17357,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -17124,7 +17368,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -17137,11 +17383,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -17159,6 +17406,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(
@@ -17380,7 +17628,7 @@ class CustomerApi:
         _content_type,
         _headers,
         _host_index,
-    ) -> Tuple:
+    ) -> RequestSerialized:
 
         _host = None
 
@@ -17391,7 +17639,9 @@ class CustomerApi:
         _query_params: List[Tuple[str, str]] = []
         _header_params: Dict[str, Optional[str]] = _headers or {}
         _form_params: List[Tuple[str, str]] = []
-        _files: Dict[str, str] = {}
+        _files: Dict[
+            str, Union[str, bytes, List[str], List[bytes], List[Tuple[str, bytes]]]
+        ] = {}
         _body_params: Optional[bytes] = None
 
         # process the path parameters
@@ -17404,11 +17654,12 @@ class CustomerApi:
 
 
         # set the HTTP header `Accept`
-        _header_params['Accept'] = self.api_client.select_header_accept(
-            [
-                'application/json'
-            ]
-        )
+        if 'Accept' not in _header_params:
+            _header_params['Accept'] = self.api_client.select_header_accept(
+                [
+                    'application/json'
+                ]
+            )
 
         # set the HTTP header `Content-Type`
         if _content_type:
@@ -17426,6 +17677,7 @@ class CustomerApi:
 
         # authentication setting
         _auth_settings: List[str] = [
+            'Authorization'
         ]
 
         return self.api_client.param_serialize(

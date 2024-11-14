@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **phone_number**| **str** |   | [optional]
 **fiscal_code**| **str** |   | [optional]
 **vat_number**| **str** |   | [optional]
-**kind**| [**CustomerAddressEntityKind**](CustomerAddressEntityKind.md) |  for more information please, see Model/CustomerAddressEntityKind.php  | [optional]
+**kind**| [**CustomerAddressEntityKind**](CustomerAddressEntityKind.md) |  for more information please, see Model/CustomerAddressEntityKind.php  | [optional] [default to CustomerAddressEntityKind.SHIPPING]
 **default**| **bool** |   | [optional]
 **country**| **str** |   | [optional]
 **attributes**| [**Dict[str, ProtobufAny]**](ProtobufAny.md) |   | [optional]

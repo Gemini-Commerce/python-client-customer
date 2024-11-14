@@ -78,10 +78,9 @@ Method | HTTP request | Description
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_create_subscriber_request import CustomerCreateSubscriberRequest
 from customer.models.customer_subscriber_response import CustomerSubscriberResponse
@@ -94,6 +93,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -124,7 +133,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -147,10 +156,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_create_subscriber_request import CustomerCreateSubscriberRequest
 from customer.models.customer_subscriber_response import CustomerSubscriberResponse
@@ -163,6 +171,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -193,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -216,10 +234,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_unsubscribe_request import CustomerUnsubscribeRequest
 from customer.models.customer_unsubscribe_response import CustomerUnsubscribeResponse
@@ -232,6 +249,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -262,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -285,10 +312,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_unsubscribe_request import CustomerUnsubscribeRequest
 from customer.models.customer_unsubscribe_response import CustomerUnsubscribeResponse
@@ -301,6 +327,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -331,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -354,10 +390,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_add_customer_to_group_request import CustomerAddCustomerToGroupRequest
 from customer.models.customer_group_response import CustomerGroupResponse
@@ -370,6 +405,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -400,7 +445,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -423,10 +468,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_add_customer_to_group_request import CustomerAddCustomerToGroupRequest
 from customer.models.customer_group_response import CustomerGroupResponse
@@ -439,6 +483,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -469,7 +523,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -492,10 +546,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_assign_agent_request import CustomerAssignAgentRequest
 from customer.rest import ApiException
@@ -507,6 +560,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -537,7 +600,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -560,10 +623,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_bulk_update_request import CustomerBulkUpdateRequest
 from customer.models.customer_bulk_update_response import CustomerBulkUpdateResponse
@@ -576,6 +638,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -606,7 +678,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -629,10 +701,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_bulk_update_request import CustomerBulkUpdateRequest
 from customer.models.customer_bulk_update_response import CustomerBulkUpdateResponse
@@ -645,6 +716,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -675,7 +756,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -698,10 +779,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_create_request import CustomerCreateRequest
 from customer.models.customer_customer_response import CustomerCustomerResponse
@@ -714,6 +794,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -744,7 +834,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -767,10 +857,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_create_request import CustomerCreateRequest
 from customer.models.customer_customer_response import CustomerCustomerResponse
@@ -783,6 +872,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -813,7 +912,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -836,10 +935,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_address_create_request import CustomerAddressCreateRequest
 from customer.models.customer_address_customer_response import CustomerAddressCustomerResponse
@@ -852,6 +950,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -882,7 +990,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -905,10 +1013,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_address_create_request import CustomerAddressCreateRequest
 from customer.models.customer_address_customer_response import CustomerAddressCustomerResponse
@@ -921,6 +1028,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -951,7 +1068,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -974,10 +1091,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_create_group_request import CustomerCreateGroupRequest
 from customer.models.customer_group_response import CustomerGroupResponse
@@ -990,6 +1106,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1020,7 +1146,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1043,10 +1169,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_create_group_request import CustomerCreateGroupRequest
 from customer.models.customer_group_response import CustomerGroupResponse
@@ -1059,6 +1184,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1089,7 +1224,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1112,10 +1247,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_create_subscriber_request import CustomerCreateSubscriberRequest
 from customer.models.customer_subscriber_response import CustomerSubscriberResponse
@@ -1128,6 +1262,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1158,7 +1302,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1181,10 +1325,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_create_subscriber_request import CustomerCreateSubscriberRequest
 from customer.models.customer_subscriber_response import CustomerSubscriberResponse
@@ -1197,6 +1340,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1227,7 +1380,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1250,10 +1403,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_address_delete_request import CustomerAddressDeleteRequest
 from customer.models.customer_address_delete_response import CustomerAddressDeleteResponse
@@ -1266,6 +1418,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1296,7 +1458,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1319,10 +1481,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_address_delete_request import CustomerAddressDeleteRequest
 from customer.models.customer_address_delete_response import CustomerAddressDeleteResponse
@@ -1335,6 +1496,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1365,7 +1536,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1388,10 +1559,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_delete_group_request import CustomerDeleteGroupRequest
 from customer.models.customer_delete_group_response import CustomerDeleteGroupResponse
@@ -1404,6 +1574,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1434,7 +1614,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1457,10 +1637,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_delete_group_request import CustomerDeleteGroupRequest
 from customer.models.customer_delete_group_response import CustomerDeleteGroupResponse
@@ -1473,6 +1652,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1503,7 +1692,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1526,10 +1715,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_find_many_request import CustomerFindManyRequest
 from customer.models.customer_find_many_response import CustomerFindManyResponse
@@ -1542,6 +1730,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1572,7 +1770,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1595,10 +1793,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_find_many_request import CustomerFindManyRequest
 from customer.models.customer_find_many_response import CustomerFindManyResponse
@@ -1611,6 +1808,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1641,7 +1848,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1664,10 +1871,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_customer_response import CustomerCustomerResponse
 from customer.models.customer_find_by_email_request import CustomerFindByEmailRequest
@@ -1680,6 +1886,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1710,7 +1926,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1733,10 +1949,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_customer_response import CustomerCustomerResponse
 from customer.models.customer_find_by_email_request import CustomerFindByEmailRequest
@@ -1749,6 +1964,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1779,7 +2004,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1802,10 +2027,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_customer_response import CustomerCustomerResponse
 from customer.models.customer_find_by_id_request import CustomerFindByIdRequest
@@ -1818,6 +2042,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1848,7 +2082,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1871,10 +2105,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_customer_response import CustomerCustomerResponse
 from customer.models.customer_find_by_id_request import CustomerFindByIdRequest
@@ -1887,6 +2120,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1917,7 +2160,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1940,10 +2183,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_find_subscriber_by_email_request import CustomerFindSubscriberByEmailRequest
 from customer.models.customer_subscriber_response import CustomerSubscriberResponse
@@ -1956,6 +2198,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -1986,7 +2238,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2009,10 +2261,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_find_subscriber_by_email_request import CustomerFindSubscriberByEmailRequest
 from customer.models.customer_subscriber_response import CustomerSubscriberResponse
@@ -2025,6 +2276,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2055,7 +2316,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2078,10 +2339,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_find_subscriber_by_id_request import CustomerFindSubscriberByIdRequest
 from customer.models.customer_subscriber_response import CustomerSubscriberResponse
@@ -2094,6 +2354,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2124,7 +2394,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2147,10 +2417,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_find_subscriber_by_id_request import CustomerFindSubscriberByIdRequest
 from customer.models.customer_subscriber_response import CustomerSubscriberResponse
@@ -2163,6 +2432,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2193,7 +2472,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2216,10 +2495,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_get_group_by_code_request import CustomerGetGroupByCodeRequest
 from customer.models.customer_group_response import CustomerGroupResponse
@@ -2232,6 +2510,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2262,7 +2550,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2285,10 +2573,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_get_group_by_code_request import CustomerGetGroupByCodeRequest
 from customer.models.customer_group_response import CustomerGroupResponse
@@ -2301,6 +2588,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2331,7 +2628,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2354,10 +2651,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_get_group_by_id_request import CustomerGetGroupByIdRequest
 from customer.models.customer_group_response import CustomerGroupResponse
@@ -2370,6 +2666,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2400,7 +2706,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2423,10 +2729,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_get_group_by_id_request import CustomerGetGroupByIdRequest
 from customer.models.customer_group_response import CustomerGroupResponse
@@ -2439,6 +2744,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2469,7 +2784,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2492,10 +2807,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_grant_permissions_request import CustomerGrantPermissionsRequest
 from customer.rest import ApiException
@@ -2507,6 +2821,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2537,7 +2861,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2560,10 +2884,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_grant_permissions_request import CustomerGrantPermissionsRequest
 from customer.rest import ApiException
@@ -2575,6 +2898,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2605,7 +2938,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2628,10 +2961,9 @@ ListConsents list all consents of a customer
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_list_consents_request import CustomerListConsentsRequest
 from customer.models.customer_list_consents_response import CustomerListConsentsResponse
@@ -2644,6 +2976,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2675,7 +3017,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2698,10 +3040,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_list_customers_request import CustomerListCustomersRequest
 from customer.models.customer_list_customers_response import CustomerListCustomersResponse
@@ -2714,6 +3055,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2744,7 +3095,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2767,10 +3118,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_list_customers_request import CustomerListCustomersRequest
 from customer.models.customer_list_customers_response import CustomerListCustomersResponse
@@ -2783,6 +3133,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2813,7 +3173,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2836,10 +3196,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_list_groups_request import CustomerListGroupsRequest
 from customer.models.customer_list_groups_response import CustomerListGroupsResponse
@@ -2852,6 +3211,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2882,7 +3251,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2905,10 +3274,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_list_groups_request import CustomerListGroupsRequest
 from customer.models.customer_list_groups_response import CustomerListGroupsResponse
@@ -2921,6 +3289,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -2951,7 +3329,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -2974,10 +3352,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_group_response import CustomerGroupResponse
 from customer.models.customer_remove_customer_from_group_request import CustomerRemoveCustomerFromGroupRequest
@@ -2990,6 +3367,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3020,7 +3407,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3043,10 +3430,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_group_response import CustomerGroupResponse
 from customer.models.customer_remove_customer_from_group_request import CustomerRemoveCustomerFromGroupRequest
@@ -3059,6 +3445,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3089,7 +3485,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3112,10 +3508,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_customer_response import CustomerCustomerResponse
 from customer.models.customer_remove_default_address_request import CustomerRemoveDefaultAddressRequest
@@ -3128,6 +3523,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3158,7 +3563,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3181,10 +3586,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_customer_response import CustomerCustomerResponse
 from customer.models.customer_remove_default_address_request import CustomerRemoveDefaultAddressRequest
@@ -3197,6 +3601,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3227,7 +3641,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3250,10 +3664,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_revoke_permissions_request import CustomerRevokePermissionsRequest
 from customer.rest import ApiException
@@ -3265,6 +3678,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3295,7 +3718,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3318,10 +3741,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_revoke_permissions_request import CustomerRevokePermissionsRequest
 from customer.rest import ApiException
@@ -3333,6 +3755,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3363,7 +3795,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3386,10 +3818,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_search_request import CustomerSearchRequest
 from customer.models.customer_search_response import CustomerSearchResponse
@@ -3402,6 +3833,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3432,7 +3873,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3455,10 +3896,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_search_request import CustomerSearchRequest
 from customer.models.customer_search_response import CustomerSearchResponse
@@ -3471,6 +3911,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3501,7 +3951,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3524,10 +3974,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_customer_response import CustomerCustomerResponse
 from customer.models.customer_set_default_address_request import CustomerSetDefaultAddressRequest
@@ -3540,6 +3989,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3570,7 +4029,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3593,10 +4052,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_customer_response import CustomerCustomerResponse
 from customer.models.customer_set_default_address_request import CustomerSetDefaultAddressRequest
@@ -3609,6 +4067,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3639,7 +4107,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3662,10 +4130,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_set_permissions_request import CustomerSetPermissionsRequest
 from customer.rest import ApiException
@@ -3677,6 +4144,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3707,7 +4184,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3730,10 +4207,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_set_permissions_request import CustomerSetPermissionsRequest
 from customer.rest import ApiException
@@ -3745,6 +4221,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3775,7 +4261,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3798,10 +4284,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_unassign_agent_request import CustomerUnassignAgentRequest
 from customer.rest import ApiException
@@ -3813,6 +4298,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3843,7 +4338,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3866,10 +4361,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_unsubscribe_request import CustomerUnsubscribeRequest
 from customer.models.customer_unsubscribe_response import CustomerUnsubscribeResponse
@@ -3882,6 +4376,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3912,7 +4416,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -3935,10 +4439,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_unsubscribe_request import CustomerUnsubscribeRequest
 from customer.models.customer_unsubscribe_response import CustomerUnsubscribeResponse
@@ -3951,6 +4454,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -3981,7 +4494,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4004,10 +4517,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_customer_response import CustomerCustomerResponse
 from customer.models.customer_update_request import CustomerUpdateRequest
@@ -4020,6 +4532,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -4050,7 +4572,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4073,10 +4595,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_customer_response import CustomerCustomerResponse
 from customer.models.customer_update_request import CustomerUpdateRequest
@@ -4089,6 +4610,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -4119,7 +4650,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4142,10 +4673,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_address_update_request import CustomerAddressUpdateRequest
 from customer.models.customer_address_update_response import CustomerAddressUpdateResponse
@@ -4158,6 +4688,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -4188,7 +4728,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4211,10 +4751,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_address_update_request import CustomerAddressUpdateRequest
 from customer.models.customer_address_update_response import CustomerAddressUpdateResponse
@@ -4227,6 +4766,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -4257,7 +4806,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4280,10 +4829,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_group_response import CustomerGroupResponse
 from customer.models.customer_update_group_request import CustomerUpdateGroupRequest
@@ -4296,6 +4844,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -4326,7 +4884,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4349,10 +4907,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_group_response import CustomerGroupResponse
 from customer.models.customer_update_group_request import CustomerUpdateGroupRequest
@@ -4365,6 +4922,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -4395,7 +4962,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4418,10 +4985,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_subscriber_response import CustomerSubscriberResponse
 from customer.models.customer_update_subscriber_request import CustomerUpdateSubscriberRequest
@@ -4434,6 +5000,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -4464,7 +5040,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -4487,10 +5063,9 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (Authorization):
 
 ```python
-import time
-import os
 import customer
 from customer.models.customer_subscriber_response import CustomerSubscriberResponse
 from customer.models.customer_update_subscriber_request import CustomerUpdateSubscriberRequest
@@ -4503,6 +5078,16 @@ configuration = customer.Configuration(
     host = "https://cdp.api.gogemini.io"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Authorization
+configuration.api_key['Authorization'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # Enter a context with an instance of the API client
 with customer.ApiClient(configuration) as api_client:
@@ -4533,7 +5118,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 

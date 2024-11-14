@@ -19,19 +19,16 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictBool, StrictStr
-from pydantic import Field
 from customer.models.customer_address_customer_response import CustomerAddressCustomerResponse
 from customer.models.customer_em_fields import CustomerEMFields
 from customer.models.customer_newsletter_response import CustomerNewsletterResponse
 from customer.models.customer_password import CustomerPassword
 from customer.models.customer_permission import CustomerPermission
 from customer.models.protobuf_any import ProtobufAny
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class CustomerCustomerResponse(BaseModel):
     """
@@ -72,13 +69,14 @@ class CustomerCustomerResponse(BaseModel):
     external_ids: Optional[Dict[str, StrictStr]] = Field(default=None, alias="externalIds")
     agent_grn: Optional[StrictStr] = Field(default=None, alias="agentGrn")
     aggregation_id: Optional[StrictStr] = Field(default=None, alias="aggregationId")
+    additional_properties: Dict[str, Any] = {}
     __properties: ClassVar[List[str]] = ["em", "grn", "id", "name", "surname", "email", "birthdate", "gender", "enabled", "source", "addresses", "defaultBillingAddressId", "defaultShippingAddressId", "phoneNumber", "nationality", "preferredLocale", "groups", "createdAt", "updatedAt", "deleted", "deletedAt", "newsletters", "migratedPassword", "attributes", "taxCode", "certifiedEmail", "sdiCode", "fiscalCode", "companyName", "additionalInfo", "market", "permissions", "externalIds", "agentGrn", "aggregationId"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -91,7 +89,7 @@ class CustomerCustomerResponse(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of CustomerCustomerResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -104,11 +102,15 @@ class CustomerCustomerResponse(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
+        * Fields in `self.additional_properties` are added to the output dict.
         """
+        excluded_fields: Set[str] = set([
+            "additional_properties",
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of em
@@ -117,16 +119,16 @@ class CustomerCustomerResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in addresses (list)
         _items = []
         if self.addresses:
-            for _item in self.addresses:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_addresses in self.addresses:
+                if _item_addresses:
+                    _items.append(_item_addresses.to_dict())
             _dict['addresses'] = _items
         # override the default output from pydantic by calling `to_dict()` of each item in newsletters (list)
         _items = []
         if self.newsletters:
-            for _item in self.newsletters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_newsletters in self.newsletters:
+                if _item_newsletters:
+                    _items.append(_item_newsletters.to_dict())
             _dict['newsletters'] = _items
         # override the default output from pydantic by calling `to_dict()` of migrated_password
         if self.migrated_password:
@@ -134,14 +136,19 @@ class CustomerCustomerResponse(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each value in attributes (dict)
         _field_dict = {}
         if self.attributes:
-            for _key in self.attributes:
-                if self.attributes[_key]:
-                    _field_dict[_key] = self.attributes[_key].to_dict()
+            for _key_attributes in self.attributes:
+                if self.attributes[_key_attributes]:
+                    _field_dict[_key_attributes] = self.attributes[_key_attributes].to_dict()
             _dict['attributes'] = _field_dict
+        # puts key-value pairs in additional_properties in the top level
+        if self.additional_properties is not None:
+            for _key, _value in self.additional_properties.items():
+                _dict[_key] = _value
+
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of CustomerCustomerResponse from a dict"""
         if obj is None:
             return None
@@ -150,7 +157,7 @@ class CustomerCustomerResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "em": CustomerEMFields.from_dict(obj.get("em")) if obj.get("em") is not None else None,
+            "em": CustomerEMFields.from_dict(obj["em"]) if obj.get("em") is not None else None,
             "grn": obj.get("grn"),
             "id": obj.get("id"),
             "name": obj.get("name"),
@@ -160,7 +167,7 @@ class CustomerCustomerResponse(BaseModel):
             "gender": obj.get("gender"),
             "enabled": obj.get("enabled"),
             "source": obj.get("source"),
-            "addresses": [CustomerAddressCustomerResponse.from_dict(_item) for _item in obj.get("addresses")] if obj.get("addresses") is not None else None,
+            "addresses": [CustomerAddressCustomerResponse.from_dict(_item) for _item in obj["addresses"]] if obj.get("addresses") is not None else None,
             "defaultBillingAddressId": obj.get("defaultBillingAddressId"),
             "defaultShippingAddressId": obj.get("defaultShippingAddressId"),
             "phoneNumber": obj.get("phoneNumber"),
@@ -171,11 +178,11 @@ class CustomerCustomerResponse(BaseModel):
             "updatedAt": obj.get("updatedAt"),
             "deleted": obj.get("deleted"),
             "deletedAt": obj.get("deletedAt"),
-            "newsletters": [CustomerNewsletterResponse.from_dict(_item) for _item in obj.get("newsletters")] if obj.get("newsletters") is not None else None,
-            "migratedPassword": CustomerPassword.from_dict(obj.get("migratedPassword")) if obj.get("migratedPassword") is not None else None,
+            "newsletters": [CustomerNewsletterResponse.from_dict(_item) for _item in obj["newsletters"]] if obj.get("newsletters") is not None else None,
+            "migratedPassword": CustomerPassword.from_dict(obj["migratedPassword"]) if obj.get("migratedPassword") is not None else None,
             "attributes": dict(
                 (_k, ProtobufAny.from_dict(_v))
-                for _k, _v in obj.get("attributes").items()
+                for _k, _v in obj["attributes"].items()
             )
             if obj.get("attributes") is not None
             else None,
@@ -191,6 +198,11 @@ class CustomerCustomerResponse(BaseModel):
             "agentGrn": obj.get("agentGrn"),
             "aggregationId": obj.get("aggregationId")
         })
+        # store additional fields in additional_properties
+        for _key in obj.keys():
+            if _key not in cls.__properties:
+                _obj.additional_properties[_key] = obj.get(_key)
+
         return _obj
 
 

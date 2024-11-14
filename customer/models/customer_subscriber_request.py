@@ -19,16 +19,13 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
-from pydantic import BaseModel, StrictStr
-from pydantic import Field
 from customer.models.customer_create_consent_request import CustomerCreateConsentRequest
 from customer.models.customer_em_fields import CustomerEMFields
 from customer.models.customer_newsletter_request import CustomerNewsletterRequest
-try:
-    from typing import Self
-except ImportError:
-    from typing_extensions import Self
+from typing import Optional, Set
+from typing_extensions import Self
 
 class CustomerSubscriberRequest(BaseModel):
     """
@@ -48,13 +45,14 @@ class CustomerSubscriberRequest(BaseModel):
     market: Optional[StrictStr] = None
     preferred_locale: Optional[StrictStr] = Field(default=None, alias="preferredLocale")
     consent: Optional[CustomerCreateConsentRequest] = None
+    additional_properties: Dict[str, Any] = {}
     __properties: ClassVar[List[str]] = ["name", "lastname", "email", "country", "gender", "birthdate", "nationality", "em", "createdAt", "updatedAt", "newsletters", "market", "preferredLocale", "consent"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:
@@ -67,7 +65,7 @@ class CustomerSubscriberRequest(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> Self:
+    def from_json(cls, json_str: str) -> Optional[Self]:
         """Create an instance of CustomerSubscriberRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
@@ -80,11 +78,15 @@ class CustomerSubscriberRequest(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
+        * Fields in `self.additional_properties` are added to the output dict.
         """
+        excluded_fields: Set[str] = set([
+            "additional_properties",
+        ])
+
         _dict = self.model_dump(
             by_alias=True,
-            exclude={
-            },
+            exclude=excluded_fields,
             exclude_none=True,
         )
         # override the default output from pydantic by calling `to_dict()` of em
@@ -93,17 +95,22 @@ class CustomerSubscriberRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in newsletters (list)
         _items = []
         if self.newsletters:
-            for _item in self.newsletters:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_newsletters in self.newsletters:
+                if _item_newsletters:
+                    _items.append(_item_newsletters.to_dict())
             _dict['newsletters'] = _items
         # override the default output from pydantic by calling `to_dict()` of consent
         if self.consent:
             _dict['consent'] = self.consent.to_dict()
+        # puts key-value pairs in additional_properties in the top level
+        if self.additional_properties is not None:
+            for _key, _value in self.additional_properties.items():
+                _dict[_key] = _value
+
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: Dict) -> Self:
+    def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
         """Create an instance of CustomerSubscriberRequest from a dict"""
         if obj is None:
             return None
@@ -119,14 +126,19 @@ class CustomerSubscriberRequest(BaseModel):
             "gender": obj.get("gender"),
             "birthdate": obj.get("birthdate"),
             "nationality": obj.get("nationality"),
-            "em": CustomerEMFields.from_dict(obj.get("em")) if obj.get("em") is not None else None,
+            "em": CustomerEMFields.from_dict(obj["em"]) if obj.get("em") is not None else None,
             "createdAt": obj.get("createdAt"),
             "updatedAt": obj.get("updatedAt"),
-            "newsletters": [CustomerNewsletterRequest.from_dict(_item) for _item in obj.get("newsletters")] if obj.get("newsletters") is not None else None,
+            "newsletters": [CustomerNewsletterRequest.from_dict(_item) for _item in obj["newsletters"]] if obj.get("newsletters") is not None else None,
             "market": obj.get("market"),
             "preferredLocale": obj.get("preferredLocale"),
-            "consent": CustomerCreateConsentRequest.from_dict(obj.get("consent")) if obj.get("consent") is not None else None
+            "consent": CustomerCreateConsentRequest.from_dict(obj["consent"]) if obj.get("consent") is not None else None
         })
+        # store additional fields in additional_properties
+        for _key in obj.keys():
+            if _key not in cls.__properties:
+                _obj.additional_properties[_key] = obj.get(_key)
+
         return _obj
 
 
